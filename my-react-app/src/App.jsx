@@ -1,56 +1,25 @@
-import { useState, useEffect } from "react";
-import TaskForm from "./components/TaskForm";
-import TaskList from "./components/TaskList";
-import header from "./components/header";
+import Header from "./components/header";
+import Footer from "./components/Footer";
+import Card from "./components/cards";
+import Button from "./components/Button";
+
 function App() {
-  const [tareas, setTareas] = useState([]);
-
-  // Cargar tareas del localStorage al iniciar
-  useEffect(() => {
-    const tareasGuardadas = JSON.parse(localStorage.getItem("tareas"));
-    if (tareasGuardadas) {
-      setTareas(tareasGuardadas);
-    }
-  }, []);
-
-  // Guardar tareas cada vez que cambien
-  useEffect(() => {
-    localStorage.setItem("tareas", JSON.stringify(tareas));
-  }, [tareas]);
-
-  const agregarTarea = (texto) => {
-    const nuevaTarea = {
-      id: Date.now(),
-      texto,
-      completada: false,
-    };
-    setTareas([...tareas, nuevaTarea]);
-  };
-
-  const eliminarTarea = (id) => {
-    setTareas(tareas.filter((t) => t.id !== id));
-  };
-
-  const alternarCompleta = (id) => {
-    setTareas(
-      tareas.map((t) =>
-        t.id === id ? { ...t, completada: !t.completada } : t
-      )
-    );
-  };
-
   return (
-   
-    <div className="container">
-      <header/>
-      <h1>📝 Lista de Tareas</h1>
-      <TaskForm onAddTask={agregarTarea} />
-      <TaskList
-        tareas={tareas}
-        onToggleComplete={alternarCompleta}
-        onDeleteTask={eliminarTarea}
-      />
-    </div>
+    <>
+      <Header />
+      <div className="container mt-4">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Button/>
+        <Button/>
+        <Button/>
+        <Button/>
+        <Button/>
+      </div>
+      <Footer />
+    </>
   );
 }
 
