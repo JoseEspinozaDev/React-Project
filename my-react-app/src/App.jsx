@@ -5,6 +5,10 @@ import Button from "./components/Button";
 import Contador from "./components/Counter";
 import Saludar from "./components/Saludo";
 import Products from "./components/Productos";
+import showText from "./components/ShowDataRealTime";
+import ShowDataRealTime from "./components/ShowDataRealTime";
+import ModeDark from "./components/modeDark";
+
 function App() {
   return (
     <>
@@ -21,7 +25,11 @@ function App() {
         <Button nombre='CANCELAR DATOS'/>
         <Button nombre='IMPRIMIR FACTURA'/>
         <Button nombre='EMITIR FACTURA'/>
-         <Contador/>
+        <Contador/>
+        <ShowDataRealTime/>
+        <ModeDark/>
+        
+
       </div>
       <Footer />
 

@@ -2,7 +2,7 @@ import React from "react";
 
 function Card() {
   return (
-    <div className="container mt-4">
+    <div className="container cards mt-4">
   <div className="row">
      <div className="col-md-4 mb-4">
       <div className="card">
