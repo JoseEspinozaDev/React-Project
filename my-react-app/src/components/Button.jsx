@@ -1,10 +1,10 @@
 import React from "react";
 
-function Button() {
+function Button(props) {
   return (
     <button type="button" className="btn btn-success m-2">
-      Success
-    </button>
+      {props.nombre}
+    </button>  
   );
 }
 
