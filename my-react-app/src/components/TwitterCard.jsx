@@ -1,8 +1,8 @@
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
-function TwitterCard({ avatar, name, userName }) {
-  const [isFollowing, setIsFollowing] = useState(false);
+function TwitterCard({ avatar, name, userName, initialisFollowing }) {
+  const [isFollowing, setIsFollowing] = useState(initialisFollowing);
 
   const handleFollow = () => {
     setIsFollowing(!isFollowing);
