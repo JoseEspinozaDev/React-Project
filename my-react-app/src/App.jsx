@@ -14,8 +14,8 @@ function App() {
     <>
       <Header />
        <Saludar nombre='Juan Perez'/>
-      <Products/>
       <div className="container mt-4">
+        <Products/>
         <Card />
         <Card />
         <Card />
@@ -28,10 +28,7 @@ function App() {
         <Contador/>
         <ShowDataRealTime/>
         <ModeDark/>
-        
-
       </div>
-      <Footer />
 
       
     </>
