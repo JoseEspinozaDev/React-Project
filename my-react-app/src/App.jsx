@@ -1,5 +1,6 @@
 import Header from "./components/header";
 import TwitterCard from "./components/TwitterCard";
+import './index.css';
 
 function App() {
   return (

@@ -1,0 +1,58 @@
+/* Hover del card */
+.hover-bg {
+  transition: background-color 0.25s ease;
+}
+.hover-bg:hover {
+  background-color: #f7f9f9;
+}
+
+/* Botones base */
+.follow-btn {
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+/* Texto por defecto */
+.follow-text {
+  display: inline;
+}
+
+/* Texto “Dejar de seguir” oculto */
+.unfollow-text {
+  display: none;
+}
+
+/* Cuando está siguiendo */
+.is-following .follow-text {
+  display: inline;
+}
+
+/* Al pasar el mouse: ocultar Siguiendo y mostrar Dejar de seguir */
+.is-following:hover .follow-text {
+  display: none;
+}
+.is-following:hover .unfollow-text {
+  display: inline;
+  color: #f4212e;
+}
+
+/* Colores personalizados */
+.btn-primary {
+  background-color: #1d9bf0;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #1a8cd8;
+}
+
+.btn-secondary {
+  background-color: #e1e8ed;
+  color: #0f1419;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: #d6d9db;
+}
